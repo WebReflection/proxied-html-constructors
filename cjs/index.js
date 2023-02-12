@@ -118,6 +118,23 @@
  * @property {new () => HTMLElement} Wbr
  */
 
+const Element = "Element";
+const Heading = "Heading";
+const Quote = "Quote";
+const DList = "DList";
+const OList = "OList";
+const Paragraph = "Paragraph";
+const UList = "UList";
+const Anchor = "Anchor";
+const Image = "Image";
+const Unknown = "Unknown";
+const Mod = "Mod";
+const TableCaption = "TableCaption";
+const TableCol = "TableCol";
+const TableSection = "TableSection";
+const TableCell = "TableCell";
+const TableRow = "TableRow";
+
 /**
  * Given an optional global context, returns a proxy that resolves
  * all tag names into their global constructors.
@@ -125,116 +142,93 @@
  * @returns {HTML}
  */
 module.exports = (self = globalThis) => new Proxy(
-  [
-    {
-      "a": 7,
-      "abbr": 0,
-      "address": 0,
-      "article": 0,
-      "aside": 0,
-      "b": 0,
-      "bdi": 0,
-      "bdo": 0,
-      "bgsound": 9,
-      "big": 0,
-      "blink": 9,
-      "blockquote": 2,
-      "caption": 11,
-      "center": 0,
-      "cite": 0,
-      "code": 0,
-      "col": 12,
-      "colgroup": 12,
-      "content": 9,
-      "dd": 0,
-      "del": 10,
-      "dfn": 0,
-      "dl": 3,
-      "dt": 0,
-      "em": 0,
-      "figcaption": 0,
-      "figure": 0,
-      "footer": 0,
-      "h1": 1,
-      "h2": 1,
-      "h3": 1,
-      "h4": 1,
-      "h5": 1,
-      "h6": 1,
-      "header": 0,
-      "i": 0,
-      "image": 9,
-      "img": 8,
-      "ins": 10,
-      "kbd": 0,
-      "keygen": 9,
-      "main": 0,
-      "mark": 0,
-      "menuitem": 9,
-      "nav": 0,
-      "nobr": 0,
-      "noembed": 0,
-      "noframes": 0,
-      "noscript": 0,
-      "ol": 4,
-      "p": 5,
-      "plaintext": 0,
-      "portal": 9,
-      "q": 2,
-      "rb": 0,
-      "rp": 0,
-      "rt": 0,
-      "rtc": 0,
-      "ruby": 0,
-      "s": 0,
-      "samp": 0,
-      "section": 0,
-      "shadow": 9,
-      "small": 0,
-      "spacer": 9,
-      "strike": 0,
-      "strong": 0,
-      "sub": 0,
-      "summary": 0,
-      "sup": 0,
-      "tbody": 13,
-      "td": 14,
-      "tfoot": 13,
-      "th": 14,
-      "thead": 13,
-      "tr": 15,
-      "tt": 0,
-      "u": 0,
-      "ul": 6,
-      "var": 0,
-      "wbr": 0
-    },
-    [
-      "Element",
-      "Heading",
-      "Quote",
-      "DList",
-      "OList",
-      "Paragraph",
-      "UList",
-      "Anchor",
-      "Image",
-      "Unknown",
-      "Mod",
-      "TableCaption",
-      "TableCol",
-      "TableSection",
-      "TableCell",
-      "TableRow"
-    ],
-  ],
+  new Map([
+    ["a", Anchor],
+    ["abbr", Element],
+    ["address", Element],
+    ["article", Element],
+    ["aside", Element],
+    ["b", Element],
+    ["bdi", Element],
+    ["bdo", Element],
+    ["bgsound", Unknown],
+    ["big", Element],
+    ["blink", Unknown],
+    ["blockquote", Quote],
+    ["caption", TableCaption],
+    ["center", Element],
+    ["cite", Element],
+    ["code", Element],
+    ["col", TableCol],
+    ["colgroup", TableCol],
+    ["content", Unknown],
+    ["dd", Element],
+    ["del", Mod],
+    ["dfn", Element],
+    ["dl", DList],
+    ["dt", Element],
+    ["em", Element],
+    ["figcaption", Element],
+    ["figure", Element],
+    ["footer", Element],
+    ["h1", Heading],
+    ["h2", Heading],
+    ["h3", Heading],
+    ["h4", Heading],
+    ["h5", Heading],
+    ["h6", Heading],
+    ["header", Element],
+    ["i", Element],
+    ["image", Unknown],
+    ["img", Image],
+    ["ins", Mod],
+    ["kbd", Element],
+    ["keygen", Unknown],
+    ["main", Element],
+    ["mark", Element],
+    ["menuitem", Unknown],
+    ["nav", Element],
+    ["nobr", Element],
+    ["noembed", Element],
+    ["noframes", Element],
+    ["noscript", Element],
+    ["ol", OList],
+    ["p", Paragraph],
+    ["plaintext", Element],
+    ["portal", Unknown],
+    ["q", Quote],
+    ["rb", Element],
+    ["rp", Element],
+    ["rt", Element],
+    ["rtc", Element],
+    ["ruby", Element],
+    ["s", Element],
+    ["samp", Element],
+    ["section", Element],
+    ["shadow", Unknown],
+    ["small", Element],
+    ["spacer", Unknown],
+    ["strike", Element],
+    ["strong", Element],
+    ["sub", Element],
+    ["summary", Element],
+    ["sup", Element],
+    ["tbody", TableSection],
+    ["td", TableCell],
+    ["tfoot", TableSection],
+    ["th", TableCell],
+    ["thead", TableSection],
+    ["tr", TableRow],
+    ["tt", Element],
+    ["u", Element],
+    ["ul", UList],
+    ["var", Element],
+    ["wbr", Element]
+  ]),
   {
-    get([tags, constructors], name) {
-      const _ = name.toLowerCase();
-      const $ = _ in tags ?
-        constructors[tags[_]] :
-        (name === constructors[0] ? '' : name);
-      return self[`HTML${$}${constructors[0]}`];
+    get(tags, name) {
+      const $ = tags.get(name.toLowerCase()) || (name === Element ? '' : name);
+      return self[`HTML${$}${Element}`];
     }
   }
 );

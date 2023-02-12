@@ -89,6 +89,14 @@ const retype = require('./retype.js');
       TS.push(` * @property {new () => ${types[field]}} ${field}`);
     TS.push(` */`);
 
+    const declarations = [];
+    for (const shortcut of constructors)
+      declarations.push(`const ${shortcut} = ${JSON.stringify(shortcut)};`);
+
+    const map = [];
+    for (const [key, index] of Object.entries(ordered))
+      map.push(`[${JSON.stringify(key)}, ${constructors[index]}]`);
+
     writeFileSync(
       join(__dirname, '..', 'esm', name + '.js'),
     `/*! (c) Andrea Giammarchi - ISC */
@@ -97,6 +105,8 @@ const retype = require('./retype.js');
 
 ${TS.join('\n')}
 
+${declarations.join('\n')}
+
 /**
  * Given an optional global context, returns a proxy that resolves
  * all tag names into their global constructors.
@@ -104,17 +114,13 @@ ${TS.join('\n')}
  * @returns {HTML}
  */
 export default (self = globalThis) => new Proxy(
-  [
-    ${JSON.stringify(ordered, null, '      ').replace(/(\S+)$/, '    $1')},
-    ${JSON.stringify(constructors, null, '      ').replace(/(\S+)$/, '    $1')},
-  ],
+  new Map([
+    ${map.join(',\n    ')}
+  ]),
   {
-    get([tags, constructors], name) {
-      const _ = name.toLowerCase();
-      const $ = _ in tags ?
-        constructors[tags[_]] :
-        (name === constructors[0] ? '' : name);
-      return self[\`HTML\${$}\${constructors[0]}\`];
+    get(tags, name) {
+      const $ = tags.get(name.toLowerCase()) || (name === Element ? '' : name);
+      return self[\`HTML\${$}\${Element}\`];
     }
   }
 );
