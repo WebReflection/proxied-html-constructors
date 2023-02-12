@@ -27,7 +27,7 @@ const retype = require('./retype.js');
 
     for (const element of elements) {
       // grab clear tag name within angled brackets
-      const tag = element.textContent.trim().replace(/^<|>$/g, '');
+      const tag = element.textContent.trim().replace(/^<|>$/g, '').toLowerCase();
 
       // flag the tag as deprecated if within the deprecated section
       if (element.closest('section[aria-labelledby="obsolete_and_deprecated_elements"]'))
