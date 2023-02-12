@@ -1,0 +1,54 @@
+{
+  "name": "proxied-html-constructors",
+  "version": "0.0.0",
+  "description": "A standard based way to retrieve the constructor of any given HTML tag name",
+  "main": "./cjs/index.js",
+  "types": "./types/index.d.ts",
+  "typesVersions": {
+    ">=4.9": {
+      "*": [
+        "types/*"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node test/play.js && npm run cjs && npm run types && npm run test",
+    "cjs": "ascjs --no-default esm cjs",
+    "test": "node test/index.js",
+    "types": "tsc -p ."
+  },
+  "keywords": [
+    "tag",
+    "name",
+    "constructor",
+    "HTML"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^5.0.1",
+    "puppeteer": "^19.6.3",
+    "typescript": "^4.9.5"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "default": "./cjs/index.js"
+    },
+    "./all": {
+      "import": "./esm/all.js",
+      "default": "./cjs/all.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/proxied-html-constructors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/proxied-html-constructors/issues"
+  },
+  "homepage": "https://github.com/WebReflection/proxied-html-constructors#readme"
+}
