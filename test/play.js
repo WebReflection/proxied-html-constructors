@@ -121,6 +121,8 @@ const retype = require('./retype.js');
   saveAs('index');
 
   function saveAs(name) {
+    const warning = '// ⚠ THIS FILE IS CREATED VIA AUTOMATION';
+
     // create the TypeScript definition of the returned HTML object type
     const TS = [`/**`, ` * @typedef {Object} HTML`];
     for (const field of [...Object.keys(types)].sort())
@@ -142,7 +144,7 @@ const retype = require('./retype.js');
       join(__dirname, '..', 'esm', name + '.js'),
       `/*! (c) Andrea Giammarchi - ISC */
 
-// ⚠ THIS FILE IS CREATED VIA AUTOMATION
+${warning}
 
 ${TS.join('\n')}
 
@@ -174,7 +176,7 @@ export default (self = globalThis) => new Proxy(
       join(__dirname, '..', 'esm', (name === 'index' ? 'names' : 'all-names') + '.js'),
       `/*! (c) Andrea Giammarchi - ISC */
 
-// ⚠ THIS FILE IS CREATED VIA AUTOMATION
+${warning}
 
 import proxiedHTMLConstructors from './${name}.js';
 
