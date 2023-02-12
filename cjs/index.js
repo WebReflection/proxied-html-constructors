@@ -227,8 +227,8 @@ module.exports = (self = globalThis) => new Proxy(
   ]),
   {
     get(tags, name) {
-      const $ = tags.get(name.toLowerCase()) || (name === Element ? '' : name);
-      return self[`HTML${$}${Element}`];
+      const Class = tags.get(name.toLowerCase()) || (name === Element ? '' : name);
+      return self['HTML' + Class + Element];
     }
   }
 );
