@@ -14,12 +14,12 @@ import proxiedHTMLConstructors from './index.js';
  * @property {"HTMLElement"} Aside
  * @property {"HTMLAudioElement"} Audio
  * @property {"HTMLElement"} B
- * @property {"HTMLBRElement"} BR
  * @property {"HTMLBaseElement"} Base
  * @property {"HTMLElement"} Bdi
  * @property {"HTMLElement"} Bdo
  * @property {"HTMLQuoteElement"} BlockQuote
  * @property {"HTMLBodyElement"} Body
+ * @property {"HTMLBRElement"} BR
  * @property {"HTMLButtonElement"} Button
  * @property {"HTMLCanvasElement"} Canvas
  * @property {"HTMLTableCaptionElement"} Caption
@@ -27,16 +27,16 @@ import proxiedHTMLConstructors from './index.js';
  * @property {"HTMLElement"} Code
  * @property {"HTMLTableColElement"} Col
  * @property {"HTMLTableColElement"} ColGroup
- * @property {"HTMLElement"} DD
- * @property {"HTMLDListElement"} DL
- * @property {"HTMLElement"} DT
  * @property {"HTMLDataElement"} Data
  * @property {"HTMLDataListElement"} DataList
+ * @property {"HTMLElement"} DD
  * @property {"HTMLModElement"} Del
  * @property {"HTMLDetailsElement"} Details
  * @property {"HTMLElement"} Dfn
  * @property {"HTMLDialogElement"} Dialog
  * @property {"HTMLDivElement"} Div
+ * @property {"HTMLDListElement"} DL
+ * @property {"HTMLElement"} DT
  * @property {"HTMLElement"} Em
  * @property {"HTMLEmbedElement"} Embed
  * @property {"HTMLFieldSetElement"} FieldSet
@@ -50,9 +50,9 @@ import proxiedHTMLConstructors from './index.js';
  * @property {"HTMLHeadingElement"} H4
  * @property {"HTMLHeadingElement"} H5
  * @property {"HTMLHeadingElement"} H6
- * @property {"HTMLHRElement"} HR
  * @property {"HTMLHeadElement"} Head
  * @property {"HTMLElement"} Header
+ * @property {"HTMLHRElement"} HR
  * @property {"HTMLHtmlElement"} Html
  * @property {"HTMLElement"} I
  * @property {"HTMLIFrameElement"} IFrame
@@ -60,9 +60,9 @@ import proxiedHTMLConstructors from './index.js';
  * @property {"HTMLInputElement"} Input
  * @property {"HTMLModElement"} Ins
  * @property {"HTMLElement"} Kbd
- * @property {"HTMLLIElement"} LI
  * @property {"HTMLLabelElement"} Label
  * @property {"HTMLLegendElement"} Legend
+ * @property {"HTMLLIElement"} LI
  * @property {"HTMLLinkElement"} Link
  * @property {"HTMLElement"} Main
  * @property {"HTMLMapElement"} Map
@@ -72,8 +72,8 @@ import proxiedHTMLConstructors from './index.js';
  * @property {"HTMLMeterElement"} Meter
  * @property {"HTMLElement"} Nav
  * @property {"HTMLElement"} NoScript
- * @property {"HTMLOListElement"} OL
  * @property {"HTMLObjectElement"} Object
+ * @property {"HTMLOListElement"} OL
  * @property {"HTMLOptGroupElement"} OptGroup
  * @property {"HTMLOptionElement"} Option
  * @property {"HTMLOutputElement"} Output
@@ -100,17 +100,17 @@ import proxiedHTMLConstructors from './index.js';
  * @property {"HTMLElement"} Sub
  * @property {"HTMLElement"} Summary
  * @property {"HTMLElement"} Sup
+ * @property {"HTMLTableElement"} Table
  * @property {"HTMLTableSectionElement"} TBody
  * @property {"HTMLTableCellElement"} TD
+ * @property {"HTMLTemplateElement"} Template
+ * @property {"HTMLTextAreaElement"} TextArea
  * @property {"HTMLTableSectionElement"} TFoot
  * @property {"HTMLTableCellElement"} TH
  * @property {"HTMLTableSectionElement"} THead
- * @property {"HTMLTableRowElement"} TR
- * @property {"HTMLTableElement"} Table
- * @property {"HTMLTemplateElement"} Template
- * @property {"HTMLTextAreaElement"} TextArea
  * @property {"HTMLTimeElement"} Time
  * @property {"HTMLTitleElement"} Title
+ * @property {"HTMLTableRowElement"} TR
  * @property {"HTMLTrackElement"} Track
  * @property {"HTMLElement"} U
  * @property {"HTMLUListElement"} UL

@@ -15,14 +15,8 @@ const retype = require('./retype.js');
     {waitUntil: 'load'}
   );
 
-  const [facades, constructors, types, missed, deprecated, data] = await page.evaluate(() => {
+  const data = await page.evaluate(() => {
     const data = {};
-    const facades = {};
-    const deprecated = [];
-    const types = {};
-    const missed = {};
-    const constructors = ['Element'];
-
     const reHTML = /^HTML(.*?)Element$/;
     const elements = document.querySelectorAll('.standard-table td:first-of-type code');
 
@@ -41,29 +35,10 @@ const retype = require('./retype.js');
         constructor: name,
         shortcut: shortcut.toLowerCase() === tag ? shortcut : ''
       };
-
-      // flag the tag as deprecated if within the deprecated section
-      if (data[tag].deprecated)
-        deprecated.push(tag);
-
-      // if creating the element resulted into its tag name backed within
-      // the constructor name, associate its shortcut name to the full one
-      if (shortcut.toLowerCase() === tag)
-        types[shortcut] = name;
-      // if the name of the constructor does not include the tag
-      else {
-        // relate the tag name to such constructor
-        missed[tag] = name;
-        // retrieve the index of the constructor or push it if new
-        let i = constructors.indexOf(shortcut);
-        // only these elements require mapping between shortcut and name
-        // i.e. HTML.A results into HTML.Anchor hence HTMLAnchorElement constructor
-        facades[tag] = i < 0 ? constructors.push(shortcut) - 1 : i;
-      }
     }
 
     // return all collected details to the outer process
-    return [facades, constructors, types, missed, deprecated, data];
+    return data;
   });
 
   const close = browser.close();
@@ -71,8 +46,11 @@ const retype = require('./retype.js');
   const orderedData = {};
   for (const tag of [...Object.keys(data)].sort()) {
     orderedData[tag] = data[tag];
-    if (!data[tag].shortcut)
+    if (!data[tag].shortcut) {
+      if (!retype[tag])
+        throw new TypeError(`Unknown tag: ${tag}`);
       data[tag].shortcut = retype[tag];
+    }
   }
 
   writeFileSync(
@@ -80,83 +58,39 @@ const retype = require('./retype.js');
     `export default (${JSON.stringify(orderedData, null, '  ')});\n`
   );
 
-  // use retype.js hash map to deal with CamelCases
-  // i.e. blockquote => BlockQuote, colgroup => ColGroup
-  for (const [tag, name] of Object.entries(missed)) {
-    // if something is missing it requires manual maintainance
-    // at the retype.js file
-    if (!retype[tag])
-      throw new TypeError(`Unknown tag: ${tag}`);
-    // add the shortcut to point at the full name (used by TS)
-    types[retype[tag]] = name;
-  }
-
-  // order all tags for human eyes sake while reading the code
-  const ordered = {};
-  for (const tag of [...Object.keys(facades)].sort())
-    ordered[tag] = facades[tag];
-
   // save all found tags and constructors, even those deprecated
-  saveAs('all');
-
-  // map back TagShortcut to tagshortcut to help dropping types
-  // that are either obsolete or deprecated
-  const dropType = {};
-  for (const key of Object.keys(types))
-    dropType[key.toLowerCase()] = key;
-
-  // loop through all deprecated types and tags
-  const droppedConstructors = new Set;
-  for (const drop of deprecated) {
-    // remove from types for TS purpose
-    delete types[dropType[drop]];
-    // if not already added as constructor to drop
-    if (!droppedConstructors.has(ordered[drop])) {
-      // add it and then remove it from ordered
-      droppedConstructors.add(ordered[drop]);
-      delete ordered[drop];
-    }
-  }
-
-  // remove constructors that are in ordered from dropped
-  // Note: this logic is pretty bad at O(n) but it's "good enough"
-  for (const index of Object.values(ordered))
-    droppedConstructors.delete(index);
-
-  // per each constructor, remove those that are not used anywhere
-  // inverted loop just because obsolete/deprecated are likely at the end
-  for (let i = constructors.length; i--;) {
-    if (droppedConstructors.has(i)) {
-      constructors.splice(i, 1);
-      // update by decreasing the value by 1 each ordered tag/type
-      for (const [key, value] of Object.entries(ordered)) {
-        if (value > i)
-          ordered[key] = value - 1;
-      }
-    }
-  }
+  saveAs('all', true);
 
   // save the ceaned up version of the module without obsolete/deprecated
-  saveAs('index');
+  saveAs('index', false);
 
-  function saveAs(name) {
+  function saveAs(name, withDeprecated) {
     const warning = '// ⚠ THIS FILE IS CREATED VIA AUTOMATION';
 
-    // create the TypeScript definition of the returned HTML object type
-    const TS = [`/**`, ` * @typedef {Object} HTML`];
-    for (const field of [...Object.keys(types)].sort())
-      TS.push(` * @property {new () => ${types[field]}} ${field}`);
-    TS.push(` */`);
+    const reHTML = /^HTML(.*?)Element$/;
 
     // simplify minifiers life by referencing once each constructor
     const declarations = [];
-    for (const shortcut of constructors)
-      declarations.push(`const ${shortcut} = ${JSON.stringify(shortcut)};`);
+    const knownDeclarations = new Set;
 
     // use a new Map<key:string, shortcut:string> to proxy
     const map = [];
-    for (const [key, index] of Object.entries(ordered))
-      map.push(`[${JSON.stringify(key)}, ${constructors[index]}]`);
+
+    // create the TypeScript definition of the returned HTML object type
+    const TS = [`/**`, ` * @typedef {Object} HTML`];
+    for (const [tag, {constructor, deprecated, shortcut}] of Object.entries(orderedData)) {
+      if (!withDeprecated && deprecated) continue;
+      TS.push(` * @property {new () => ${constructor}} ${shortcut}`);
+      const name = constructor.replace(reHTML, '$1') || 'Element';
+      if (name !== shortcut) {
+        if (!knownDeclarations.has(name)) {
+          knownDeclarations.add(name);
+          declarations.push(`const ${name} = ${JSON.stringify(name)};`);
+        }
+        map.push(`[${JSON.stringify(tag)}, ${name}]`);
+      }
+    }
+    TS.push(` */`);
 
     // save the file
     writeFileSync(

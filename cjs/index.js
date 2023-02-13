@@ -13,12 +13,12 @@
  * @property {new () => HTMLElement} Aside
  * @property {new () => HTMLAudioElement} Audio
  * @property {new () => HTMLElement} B
- * @property {new () => HTMLBRElement} BR
  * @property {new () => HTMLBaseElement} Base
  * @property {new () => HTMLElement} Bdi
  * @property {new () => HTMLElement} Bdo
  * @property {new () => HTMLQuoteElement} BlockQuote
  * @property {new () => HTMLBodyElement} Body
+ * @property {new () => HTMLBRElement} BR
  * @property {new () => HTMLButtonElement} Button
  * @property {new () => HTMLCanvasElement} Canvas
  * @property {new () => HTMLTableCaptionElement} Caption
@@ -26,16 +26,16 @@
  * @property {new () => HTMLElement} Code
  * @property {new () => HTMLTableColElement} Col
  * @property {new () => HTMLTableColElement} ColGroup
- * @property {new () => HTMLElement} DD
- * @property {new () => HTMLDListElement} DL
- * @property {new () => HTMLElement} DT
  * @property {new () => HTMLDataElement} Data
  * @property {new () => HTMLDataListElement} DataList
+ * @property {new () => HTMLElement} DD
  * @property {new () => HTMLModElement} Del
  * @property {new () => HTMLDetailsElement} Details
  * @property {new () => HTMLElement} Dfn
  * @property {new () => HTMLDialogElement} Dialog
  * @property {new () => HTMLDivElement} Div
+ * @property {new () => HTMLDListElement} DL
+ * @property {new () => HTMLElement} DT
  * @property {new () => HTMLElement} Em
  * @property {new () => HTMLEmbedElement} Embed
  * @property {new () => HTMLFieldSetElement} FieldSet
@@ -49,9 +49,9 @@
  * @property {new () => HTMLHeadingElement} H4
  * @property {new () => HTMLHeadingElement} H5
  * @property {new () => HTMLHeadingElement} H6
- * @property {new () => HTMLHRElement} HR
  * @property {new () => HTMLHeadElement} Head
  * @property {new () => HTMLElement} Header
+ * @property {new () => HTMLHRElement} HR
  * @property {new () => HTMLHtmlElement} Html
  * @property {new () => HTMLElement} I
  * @property {new () => HTMLIFrameElement} IFrame
@@ -59,9 +59,9 @@
  * @property {new () => HTMLInputElement} Input
  * @property {new () => HTMLModElement} Ins
  * @property {new () => HTMLElement} Kbd
- * @property {new () => HTMLLIElement} LI
  * @property {new () => HTMLLabelElement} Label
  * @property {new () => HTMLLegendElement} Legend
+ * @property {new () => HTMLLIElement} LI
  * @property {new () => HTMLLinkElement} Link
  * @property {new () => HTMLElement} Main
  * @property {new () => HTMLMapElement} Map
@@ -71,8 +71,8 @@
  * @property {new () => HTMLMeterElement} Meter
  * @property {new () => HTMLElement} Nav
  * @property {new () => HTMLElement} NoScript
- * @property {new () => HTMLOListElement} OL
  * @property {new () => HTMLObjectElement} Object
+ * @property {new () => HTMLOListElement} OL
  * @property {new () => HTMLOptGroupElement} OptGroup
  * @property {new () => HTMLOptionElement} Option
  * @property {new () => HTMLOutputElement} Output
@@ -99,17 +99,17 @@
  * @property {new () => HTMLElement} Sub
  * @property {new () => HTMLElement} Summary
  * @property {new () => HTMLElement} Sup
+ * @property {new () => HTMLTableElement} Table
  * @property {new () => HTMLTableSectionElement} TBody
  * @property {new () => HTMLTableCellElement} TD
+ * @property {new () => HTMLTemplateElement} Template
+ * @property {new () => HTMLTextAreaElement} TextArea
  * @property {new () => HTMLTableSectionElement} TFoot
  * @property {new () => HTMLTableCellElement} TH
  * @property {new () => HTMLTableSectionElement} THead
- * @property {new () => HTMLTableRowElement} TR
- * @property {new () => HTMLTableElement} Table
- * @property {new () => HTMLTemplateElement} Template
- * @property {new () => HTMLTextAreaElement} TextArea
  * @property {new () => HTMLTimeElement} Time
  * @property {new () => HTMLTitleElement} Title
+ * @property {new () => HTMLTableRowElement} TR
  * @property {new () => HTMLTrackElement} Track
  * @property {new () => HTMLElement} U
  * @property {new () => HTMLUListElement} UL
@@ -118,22 +118,22 @@
  * @property {new () => HTMLElement} Wbr
  */
 
-const Element = "Element";
-const Heading = "Heading";
-const Quote = "Quote";
-const DList = "DList";
-const OList = "OList";
-const Paragraph = "Paragraph";
-const UList = "UList";
 const Anchor = "Anchor";
-const Image = "Image";
-const Unknown = "Unknown";
-const Mod = "Mod";
+const Element = "Element";
+const Quote = "Quote";
 const TableCaption = "TableCaption";
 const TableCol = "TableCol";
+const Mod = "Mod";
+const DList = "DList";
+const Heading = "Heading";
+const Image = "Image";
+const OList = "OList";
+const Paragraph = "Paragraph";
+const Unknown = "Unknown";
 const TableSection = "TableSection";
 const TableCell = "TableCell";
 const TableRow = "TableRow";
+const UList = "UList";
 
 /**
  * Given an optional global context, returns a proxy that resolves
@@ -151,17 +151,12 @@ module.exports = (self = globalThis) => new Proxy(
     ["b", Element],
     ["bdi", Element],
     ["bdo", Element],
-    ["bgsound", Unknown],
-    ["big", Element],
-    ["blink", Unknown],
     ["blockquote", Quote],
     ["caption", TableCaption],
-    ["center", Element],
     ["cite", Element],
     ["code", Element],
     ["col", TableCol],
     ["colgroup", TableCol],
-    ["content", Unknown],
     ["dd", Element],
     ["del", Mod],
     ["dfn", Element],
@@ -179,36 +174,24 @@ module.exports = (self = globalThis) => new Proxy(
     ["h6", Heading],
     ["header", Element],
     ["i", Element],
-    ["image", Unknown],
     ["img", Image],
     ["ins", Mod],
     ["kbd", Element],
-    ["keygen", Unknown],
     ["main", Element],
     ["mark", Element],
-    ["menuitem", Unknown],
     ["nav", Element],
-    ["nobr", Element],
-    ["noembed", Element],
-    ["noframes", Element],
     ["noscript", Element],
     ["ol", OList],
     ["p", Paragraph],
-    ["plaintext", Element],
     ["portal", Unknown],
     ["q", Quote],
-    ["rb", Element],
     ["rp", Element],
     ["rt", Element],
-    ["rtc", Element],
     ["ruby", Element],
     ["s", Element],
     ["samp", Element],
     ["section", Element],
-    ["shadow", Unknown],
     ["small", Element],
-    ["spacer", Unknown],
-    ["strike", Element],
     ["strong", Element],
     ["sub", Element],
     ["summary", Element],
@@ -219,7 +202,6 @@ module.exports = (self = globalThis) => new Proxy(
     ["th", TableCell],
     ["thead", TableSection],
     ["tr", TableRow],
-    ["tt", Element],
     ["u", Element],
     ["ul", UList],
     ["var", Element],
