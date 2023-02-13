@@ -35,22 +35,27 @@
   "type": "module",
   "exports": {
     ".": {
+      "types": "./types/index.d.ts",
       "import": "./esm/index.js",
       "default": "./cjs/index.js"
     },
     "./all": {
+      "types": "./types/all.d.ts",
       "import": "./esm/all.js",
       "default": "./cjs/all.js"
     },
     "./all-names": {
+      "types": "./types/all-names.d.ts",
       "import": "./esm/all-names.js",
       "default": "./cjs/all-names.js"
     },
     "./data": {
+      "types": "./types/data.d.ts",
       "import": "./esm/data.js",
       "default": "./cjs/data.js"
     },
     "./names": {
+      "types": "./types/names.d.ts",
       "import": "./esm/names.js",
       "default": "./cjs/names.js"
     },
