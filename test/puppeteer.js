@@ -15,7 +15,8 @@ const retype = require('./retype.js');
     {waitUntil: 'load'}
   );
 
-  const [facades, constructors, types, missed, deprecated] = await page.evaluate(() => {
+  const [facades, constructors, types, missed, deprecated, data] = await page.evaluate(() => {
+    const data = {};
     const facades = {};
     const deprecated = [];
     const types = {};
@@ -29,15 +30,21 @@ const retype = require('./retype.js');
       // grab clear tag name within angled brackets
       const tag = element.textContent.trim().replace(/^<|>$/g, '').toLowerCase();
 
-      // flag the tag as deprecated if within the deprecated section
-      if (element.closest('section[aria-labelledby="obsolete_and_deprecated_elements"]'))
-        deprecated.push(tag);
-
       // create an element through the tag to reach its constructor
       const {name} = document.createElement(tag).constructor;
 
       // drop prefix and suffix from the constructor name, fallback to Element
       const shortcut = name.replace(reHTML, '$1') || 'Element';
+
+      data[tag] = {
+        deprecated: !!element.closest('section[aria-labelledby="obsolete_and_deprecated_elements"]'),
+        constructor: name,
+        shortcut: shortcut.toLowerCase() === tag ? shortcut : ''
+      };
+
+      // flag the tag as deprecated if within the deprecated section
+      if (data[tag].deprecated)
+        deprecated.push(tag);
 
       // if creating the element resulted into its tag name backed within
       // the constructor name, associate its shortcut name to the full one
@@ -56,10 +63,22 @@ const retype = require('./retype.js');
     }
 
     // return all collected details to the outer process
-    return [facades, constructors, types, missed, deprecated];
+    return [facades, constructors, types, missed, deprecated, data];
   });
 
   const close = browser.close();
+
+  const orderedData = {};
+  for (const tag of [...Object.keys(data)].sort()) {
+    orderedData[tag] = data[tag];
+    if (!data[tag].shortcut)
+      data[tag].shortcut = retype[tag];
+  }
+
+  writeFileSync(
+    join(__dirname, '..', 'esm', 'data.js'),
+    `export default (${JSON.stringify(orderedData, null, '  ')});\n`
+  );
 
   // use retype.js hash map to deal with CamelCases
   // i.e. blockquote => BlockQuote, colgroup => ColGroup

@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "build": "node test/play.js && npm run cjs && npm run types && npm run test",
+    "build": "node test/puppeteer.js && npm run cjs && npm run types && npm run test",
     "cjs": "ascjs --no-default esm cjs",
     "test": "c8 node test/index.js",
     "types": "tsc -p ."
@@ -45,6 +45,10 @@
     "./all-names": {
       "import": "./esm/all-names.js",
       "default": "./cjs/all-names.js"
+    },
+    "./data": {
+      "import": "./esm/data.js",
+      "default": "./cjs/data.js"
     },
     "./names": {
       "import": "./esm/names.js",

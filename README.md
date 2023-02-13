@@ -37,3 +37,7 @@ HTML.TD;  // "HTMLTableCellElement"
 HTML.TH;  // "HTMLTableCellElement"
 // ... and so on ... every tag maps to its constructor's name
 ```
+
+### Just data
+
+The `/data` export of this module provides an object with *tags* as keys and `deprecated`, `constructor` and `shortcut` fields, respectively a *boolean*, a *string* and also a *string*.
