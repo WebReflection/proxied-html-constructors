@@ -63,7 +63,7 @@ export type HTML = {
     Main: "HTMLElement";
     Map: "HTMLMapElement";
     Mark: "HTMLElement";
-    Math: "HTMLUnknownElement";
+    "": new () => HTMLUnknownElement;
     Menu: "HTMLMenuElement";
     Meta: "HTMLMetaElement";
     Meter: "HTMLMeterElement";
@@ -97,7 +97,6 @@ export type HTML = {
     Sub: "HTMLElement";
     Summary: "HTMLElement";
     Sup: "HTMLElement";
-    SVG: "HTMLUnknownElement";
     Table: "HTMLTableElement";
     TBody: "HTMLTableSectionElement";
     TD: "HTMLTableCellElement";

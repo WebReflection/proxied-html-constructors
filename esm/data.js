@@ -382,7 +382,7 @@ export default ({
   "math": {
     "deprecated": false,
     "constructor": "HTMLUnknownElement",
-    "shortcut": "Math"
+    "shortcut": ""
   },
   "menu": {
     "deprecated": false,
@@ -607,7 +607,7 @@ export default ({
   "svg": {
     "deprecated": false,
     "constructor": "HTMLUnknownElement",
-    "shortcut": "SVG"
+    "shortcut": ""
   },
   "table": {
     "deprecated": false,

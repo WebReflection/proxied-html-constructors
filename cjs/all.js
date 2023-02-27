@@ -81,7 +81,7 @@
  * @property {new () => HTMLMapElement} Map
  * @property {new () => HTMLElement} Mark
  * @property {new () => HTMLMarqueeElement} Marquee
- * @property {new () => HTMLUnknownElement} Math
+ * @property {new () => HTMLUnknownElement} 
  * @property {new () => HTMLMenuElement} Menu
  * @property {new () => HTMLUnknownElement} MenuItem
  * @property {new () => HTMLMetaElement} Meta
@@ -126,7 +126,7 @@
  * @property {new () => HTMLElement} Sub
  * @property {new () => HTMLElement} Summary
  * @property {new () => HTMLElement} Sup
- * @property {new () => HTMLUnknownElement} SVG
+ * @property {new () => HTMLUnknownElement} 
  * @property {new () => HTMLTableElement} Table
  * @property {new () => HTMLTableSectionElement} TBody
  * @property {new () => HTMLTableCellElement} TD

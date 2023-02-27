@@ -383,7 +383,7 @@ module.exports = ({
   "math": {
     "deprecated": false,
     "constructor": "HTMLUnknownElement",
-    "shortcut": "Math"
+    "shortcut": ""
   },
   "menu": {
     "deprecated": false,
@@ -608,7 +608,7 @@ module.exports = ({
   "svg": {
     "deprecated": false,
     "constructor": "HTMLUnknownElement",
-    "shortcut": "SVG"
+    "shortcut": ""
   },
   "table": {
     "deprecated": false,

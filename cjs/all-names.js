@@ -83,7 +83,7 @@ const proxiedHTMLConstructors = (m => /* c8 ignore start */ m.__esModule ? m.def
  * @property {"HTMLMapElement"} Map
  * @property {"HTMLElement"} Mark
  * @property {"HTMLMarqueeElement"} Marquee
- * @property {"HTMLUnknownElement"} Math
+ * @property {new () => HTMLUnknownElement} 
  * @property {"HTMLMenuElement"} Menu
  * @property {"HTMLUnknownElement"} MenuItem
  * @property {"HTMLMetaElement"} Meta
@@ -128,7 +128,7 @@ const proxiedHTMLConstructors = (m => /* c8 ignore start */ m.__esModule ? m.def
  * @property {"HTMLElement"} Sub
  * @property {"HTMLElement"} Summary
  * @property {"HTMLElement"} Sup
- * @property {"HTMLUnknownElement"} SVG
+ * @property {new () => HTMLUnknownElement} 
  * @property {"HTMLTableElement"} Table
  * @property {"HTMLTableSectionElement"} TBody
  * @property {"HTMLTableCellElement"} TD

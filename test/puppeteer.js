@@ -51,8 +51,14 @@ const retype = require('./retype.js');
   for (const tag of [...Object.keys(data)].sort()) {
     orderedData[tag] = data[tag];
     if (!data[tag].shortcut) {
-      if (!retype[tag])
+      if (!retype[tag]) {
+        switch (tag) {
+          case 'math':
+          case 'svg':
+            continue;
+        }
         throw new TypeError(`Unknown tag: ${tag}`);
+      }
       data[tag].shortcut = retype[tag];
     }
   }
