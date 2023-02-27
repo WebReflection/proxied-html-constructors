@@ -1,6 +1,6 @@
 {
   "name": "proxied-html-constructors",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "A standard based way to retrieve the constructor of any given HTML tag name",
   "main": "./cjs/index.js",
   "types": "./types/index.d.ts",
