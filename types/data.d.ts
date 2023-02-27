@@ -604,7 +604,7 @@ declare namespace _default {
         const shortcut_75: string;
         export { shortcut_75 as shortcut };
     }
-    export namespace math {
+    export namespace menu {
         const deprecated_76: boolean;
         export { deprecated_76 as deprecated };
         const constructor_76: string;
@@ -612,7 +612,7 @@ declare namespace _default {
         const shortcut_76: string;
         export { shortcut_76 as shortcut };
     }
-    export namespace menu {
+    export namespace menuitem {
         const deprecated_77: boolean;
         export { deprecated_77 as deprecated };
         const constructor_77: string;
@@ -620,7 +620,7 @@ declare namespace _default {
         const shortcut_77: string;
         export { shortcut_77 as shortcut };
     }
-    export namespace menuitem {
+    export namespace meta {
         const deprecated_78: boolean;
         export { deprecated_78 as deprecated };
         const constructor_78: string;
@@ -628,7 +628,7 @@ declare namespace _default {
         const shortcut_78: string;
         export { shortcut_78 as shortcut };
     }
-    export namespace meta {
+    export namespace meter {
         const deprecated_79: boolean;
         export { deprecated_79 as deprecated };
         const constructor_79: string;
@@ -636,7 +636,7 @@ declare namespace _default {
         const shortcut_79: string;
         export { shortcut_79 as shortcut };
     }
-    export namespace meter {
+    export namespace nav {
         const deprecated_80: boolean;
         export { deprecated_80 as deprecated };
         const constructor_80: string;
@@ -644,7 +644,7 @@ declare namespace _default {
         const shortcut_80: string;
         export { shortcut_80 as shortcut };
     }
-    export namespace nav {
+    export namespace nobr {
         const deprecated_81: boolean;
         export { deprecated_81 as deprecated };
         const constructor_81: string;
@@ -652,7 +652,7 @@ declare namespace _default {
         const shortcut_81: string;
         export { shortcut_81 as shortcut };
     }
-    export namespace nobr {
+    export namespace noembed {
         const deprecated_82: boolean;
         export { deprecated_82 as deprecated };
         const constructor_82: string;
@@ -660,7 +660,7 @@ declare namespace _default {
         const shortcut_82: string;
         export { shortcut_82 as shortcut };
     }
-    export namespace noembed {
+    export namespace noframes {
         const deprecated_83: boolean;
         export { deprecated_83 as deprecated };
         const constructor_83: string;
@@ -668,7 +668,7 @@ declare namespace _default {
         const shortcut_83: string;
         export { shortcut_83 as shortcut };
     }
-    export namespace noframes {
+    export namespace noscript {
         const deprecated_84: boolean;
         export { deprecated_84 as deprecated };
         const constructor_84: string;
@@ -676,7 +676,7 @@ declare namespace _default {
         const shortcut_84: string;
         export { shortcut_84 as shortcut };
     }
-    export namespace noscript {
+    export namespace object {
         const deprecated_85: boolean;
         export { deprecated_85 as deprecated };
         const constructor_85: string;
@@ -684,7 +684,7 @@ declare namespace _default {
         const shortcut_85: string;
         export { shortcut_85 as shortcut };
     }
-    export namespace object {
+    export namespace ol {
         const deprecated_86: boolean;
         export { deprecated_86 as deprecated };
         const constructor_86: string;
@@ -692,7 +692,7 @@ declare namespace _default {
         const shortcut_86: string;
         export { shortcut_86 as shortcut };
     }
-    export namespace ol {
+    export namespace optgroup {
         const deprecated_87: boolean;
         export { deprecated_87 as deprecated };
         const constructor_87: string;
@@ -700,7 +700,7 @@ declare namespace _default {
         const shortcut_87: string;
         export { shortcut_87 as shortcut };
     }
-    export namespace optgroup {
+    export namespace option {
         const deprecated_88: boolean;
         export { deprecated_88 as deprecated };
         const constructor_88: string;
@@ -708,7 +708,7 @@ declare namespace _default {
         const shortcut_88: string;
         export { shortcut_88 as shortcut };
     }
-    export namespace option {
+    export namespace output {
         const deprecated_89: boolean;
         export { deprecated_89 as deprecated };
         const constructor_89: string;
@@ -716,7 +716,7 @@ declare namespace _default {
         const shortcut_89: string;
         export { shortcut_89 as shortcut };
     }
-    export namespace output {
+    export namespace p {
         const deprecated_90: boolean;
         export { deprecated_90 as deprecated };
         const constructor_90: string;
@@ -724,7 +724,7 @@ declare namespace _default {
         const shortcut_90: string;
         export { shortcut_90 as shortcut };
     }
-    export namespace p {
+    export namespace param {
         const deprecated_91: boolean;
         export { deprecated_91 as deprecated };
         const constructor_91: string;
@@ -732,7 +732,7 @@ declare namespace _default {
         const shortcut_91: string;
         export { shortcut_91 as shortcut };
     }
-    export namespace param {
+    export namespace picture {
         const deprecated_92: boolean;
         export { deprecated_92 as deprecated };
         const constructor_92: string;
@@ -740,7 +740,7 @@ declare namespace _default {
         const shortcut_92: string;
         export { shortcut_92 as shortcut };
     }
-    export namespace picture {
+    export namespace plaintext {
         const deprecated_93: boolean;
         export { deprecated_93 as deprecated };
         const constructor_93: string;
@@ -748,7 +748,7 @@ declare namespace _default {
         const shortcut_93: string;
         export { shortcut_93 as shortcut };
     }
-    export namespace plaintext {
+    export namespace portal {
         const deprecated_94: boolean;
         export { deprecated_94 as deprecated };
         const constructor_94: string;
@@ -756,7 +756,7 @@ declare namespace _default {
         const shortcut_94: string;
         export { shortcut_94 as shortcut };
     }
-    export namespace portal {
+    export namespace pre {
         const deprecated_95: boolean;
         export { deprecated_95 as deprecated };
         const constructor_95: string;
@@ -764,7 +764,7 @@ declare namespace _default {
         const shortcut_95: string;
         export { shortcut_95 as shortcut };
     }
-    export namespace pre {
+    export namespace progress {
         const deprecated_96: boolean;
         export { deprecated_96 as deprecated };
         const constructor_96: string;
@@ -772,7 +772,7 @@ declare namespace _default {
         const shortcut_96: string;
         export { shortcut_96 as shortcut };
     }
-    export namespace progress {
+    export namespace q {
         const deprecated_97: boolean;
         export { deprecated_97 as deprecated };
         const constructor_97: string;
@@ -780,7 +780,7 @@ declare namespace _default {
         const shortcut_97: string;
         export { shortcut_97 as shortcut };
     }
-    export namespace q {
+    export namespace rb {
         const deprecated_98: boolean;
         export { deprecated_98 as deprecated };
         const constructor_98: string;
@@ -788,7 +788,7 @@ declare namespace _default {
         const shortcut_98: string;
         export { shortcut_98 as shortcut };
     }
-    export namespace rb {
+    export namespace rp {
         const deprecated_99: boolean;
         export { deprecated_99 as deprecated };
         const constructor_99: string;
@@ -796,7 +796,7 @@ declare namespace _default {
         const shortcut_99: string;
         export { shortcut_99 as shortcut };
     }
-    export namespace rp {
+    export namespace rt {
         const deprecated_100: boolean;
         export { deprecated_100 as deprecated };
         const constructor_100: string;
@@ -804,7 +804,7 @@ declare namespace _default {
         const shortcut_100: string;
         export { shortcut_100 as shortcut };
     }
-    export namespace rt {
+    export namespace rtc {
         const deprecated_101: boolean;
         export { deprecated_101 as deprecated };
         const constructor_101: string;
@@ -812,7 +812,7 @@ declare namespace _default {
         const shortcut_101: string;
         export { shortcut_101 as shortcut };
     }
-    export namespace rtc {
+    export namespace ruby {
         const deprecated_102: boolean;
         export { deprecated_102 as deprecated };
         const constructor_102: string;
@@ -820,7 +820,7 @@ declare namespace _default {
         const shortcut_102: string;
         export { shortcut_102 as shortcut };
     }
-    export namespace ruby {
+    export namespace s {
         const deprecated_103: boolean;
         export { deprecated_103 as deprecated };
         const constructor_103: string;
@@ -828,7 +828,7 @@ declare namespace _default {
         const shortcut_103: string;
         export { shortcut_103 as shortcut };
     }
-    export namespace s {
+    export namespace samp {
         const deprecated_104: boolean;
         export { deprecated_104 as deprecated };
         const constructor_104: string;
@@ -836,7 +836,7 @@ declare namespace _default {
         const shortcut_104: string;
         export { shortcut_104 as shortcut };
     }
-    export namespace samp {
+    export namespace script {
         const deprecated_105: boolean;
         export { deprecated_105 as deprecated };
         const constructor_105: string;
@@ -844,7 +844,7 @@ declare namespace _default {
         const shortcut_105: string;
         export { shortcut_105 as shortcut };
     }
-    export namespace script {
+    export namespace section {
         const deprecated_106: boolean;
         export { deprecated_106 as deprecated };
         const constructor_106: string;
@@ -852,7 +852,7 @@ declare namespace _default {
         const shortcut_106: string;
         export { shortcut_106 as shortcut };
     }
-    export namespace section {
+    export namespace select {
         const deprecated_107: boolean;
         export { deprecated_107 as deprecated };
         const constructor_107: string;
@@ -860,7 +860,7 @@ declare namespace _default {
         const shortcut_107: string;
         export { shortcut_107 as shortcut };
     }
-    export namespace select {
+    export namespace shadow {
         const deprecated_108: boolean;
         export { deprecated_108 as deprecated };
         const constructor_108: string;
@@ -868,7 +868,7 @@ declare namespace _default {
         const shortcut_108: string;
         export { shortcut_108 as shortcut };
     }
-    export namespace shadow {
+    export namespace slot {
         const deprecated_109: boolean;
         export { deprecated_109 as deprecated };
         const constructor_109: string;
@@ -876,7 +876,7 @@ declare namespace _default {
         const shortcut_109: string;
         export { shortcut_109 as shortcut };
     }
-    export namespace slot {
+    export namespace small {
         const deprecated_110: boolean;
         export { deprecated_110 as deprecated };
         const constructor_110: string;
@@ -884,7 +884,7 @@ declare namespace _default {
         const shortcut_110: string;
         export { shortcut_110 as shortcut };
     }
-    export namespace small {
+    export namespace source {
         const deprecated_111: boolean;
         export { deprecated_111 as deprecated };
         const constructor_111: string;
@@ -892,7 +892,7 @@ declare namespace _default {
         const shortcut_111: string;
         export { shortcut_111 as shortcut };
     }
-    export namespace source {
+    export namespace spacer {
         const deprecated_112: boolean;
         export { deprecated_112 as deprecated };
         const constructor_112: string;
@@ -900,7 +900,7 @@ declare namespace _default {
         const shortcut_112: string;
         export { shortcut_112 as shortcut };
     }
-    export namespace spacer {
+    export namespace span {
         const deprecated_113: boolean;
         export { deprecated_113 as deprecated };
         const constructor_113: string;
@@ -908,7 +908,7 @@ declare namespace _default {
         const shortcut_113: string;
         export { shortcut_113 as shortcut };
     }
-    export namespace span {
+    export namespace strike {
         const deprecated_114: boolean;
         export { deprecated_114 as deprecated };
         const constructor_114: string;
@@ -916,7 +916,7 @@ declare namespace _default {
         const shortcut_114: string;
         export { shortcut_114 as shortcut };
     }
-    export namespace strike {
+    export namespace strong {
         const deprecated_115: boolean;
         export { deprecated_115 as deprecated };
         const constructor_115: string;
@@ -924,7 +924,7 @@ declare namespace _default {
         const shortcut_115: string;
         export { shortcut_115 as shortcut };
     }
-    export namespace strong {
+    export namespace style {
         const deprecated_116: boolean;
         export { deprecated_116 as deprecated };
         const constructor_116: string;
@@ -932,7 +932,7 @@ declare namespace _default {
         const shortcut_116: string;
         export { shortcut_116 as shortcut };
     }
-    export namespace style {
+    export namespace sub {
         const deprecated_117: boolean;
         export { deprecated_117 as deprecated };
         const constructor_117: string;
@@ -940,7 +940,7 @@ declare namespace _default {
         const shortcut_117: string;
         export { shortcut_117 as shortcut };
     }
-    export namespace sub {
+    export namespace summary {
         const deprecated_118: boolean;
         export { deprecated_118 as deprecated };
         const constructor_118: string;
@@ -948,7 +948,7 @@ declare namespace _default {
         const shortcut_118: string;
         export { shortcut_118 as shortcut };
     }
-    export namespace summary {
+    export namespace sup {
         const deprecated_119: boolean;
         export { deprecated_119 as deprecated };
         const constructor_119: string;
@@ -956,7 +956,7 @@ declare namespace _default {
         const shortcut_119: string;
         export { shortcut_119 as shortcut };
     }
-    export namespace sup {
+    export namespace table {
         const deprecated_120: boolean;
         export { deprecated_120 as deprecated };
         const constructor_120: string;
@@ -964,7 +964,7 @@ declare namespace _default {
         const shortcut_120: string;
         export { shortcut_120 as shortcut };
     }
-    export namespace svg {
+    export namespace tbody {
         const deprecated_121: boolean;
         export { deprecated_121 as deprecated };
         const constructor_121: string;
@@ -972,7 +972,7 @@ declare namespace _default {
         const shortcut_121: string;
         export { shortcut_121 as shortcut };
     }
-    export namespace table {
+    export namespace td {
         const deprecated_122: boolean;
         export { deprecated_122 as deprecated };
         const constructor_122: string;
@@ -980,7 +980,7 @@ declare namespace _default {
         const shortcut_122: string;
         export { shortcut_122 as shortcut };
     }
-    export namespace tbody {
+    export namespace template {
         const deprecated_123: boolean;
         export { deprecated_123 as deprecated };
         const constructor_123: string;
@@ -988,7 +988,7 @@ declare namespace _default {
         const shortcut_123: string;
         export { shortcut_123 as shortcut };
     }
-    export namespace td {
+    export namespace textarea {
         const deprecated_124: boolean;
         export { deprecated_124 as deprecated };
         const constructor_124: string;
@@ -996,7 +996,7 @@ declare namespace _default {
         const shortcut_124: string;
         export { shortcut_124 as shortcut };
     }
-    export namespace template {
+    export namespace tfoot {
         const deprecated_125: boolean;
         export { deprecated_125 as deprecated };
         const constructor_125: string;
@@ -1004,7 +1004,7 @@ declare namespace _default {
         const shortcut_125: string;
         export { shortcut_125 as shortcut };
     }
-    export namespace textarea {
+    export namespace th {
         const deprecated_126: boolean;
         export { deprecated_126 as deprecated };
         const constructor_126: string;
@@ -1012,7 +1012,7 @@ declare namespace _default {
         const shortcut_126: string;
         export { shortcut_126 as shortcut };
     }
-    export namespace tfoot {
+    export namespace thead {
         const deprecated_127: boolean;
         export { deprecated_127 as deprecated };
         const constructor_127: string;
@@ -1020,7 +1020,7 @@ declare namespace _default {
         const shortcut_127: string;
         export { shortcut_127 as shortcut };
     }
-    export namespace th {
+    export namespace time {
         const deprecated_128: boolean;
         export { deprecated_128 as deprecated };
         const constructor_128: string;
@@ -1028,7 +1028,7 @@ declare namespace _default {
         const shortcut_128: string;
         export { shortcut_128 as shortcut };
     }
-    export namespace thead {
+    export namespace title {
         const deprecated_129: boolean;
         export { deprecated_129 as deprecated };
         const constructor_129: string;
@@ -1036,7 +1036,7 @@ declare namespace _default {
         const shortcut_129: string;
         export { shortcut_129 as shortcut };
     }
-    export namespace time {
+    export namespace tr {
         const deprecated_130: boolean;
         export { deprecated_130 as deprecated };
         const constructor_130: string;
@@ -1044,7 +1044,7 @@ declare namespace _default {
         const shortcut_130: string;
         export { shortcut_130 as shortcut };
     }
-    export namespace title {
+    export namespace track {
         const deprecated_131: boolean;
         export { deprecated_131 as deprecated };
         const constructor_131: string;
@@ -1052,7 +1052,7 @@ declare namespace _default {
         const shortcut_131: string;
         export { shortcut_131 as shortcut };
     }
-    export namespace tr {
+    export namespace tt {
         const deprecated_132: boolean;
         export { deprecated_132 as deprecated };
         const constructor_132: string;
@@ -1060,7 +1060,7 @@ declare namespace _default {
         const shortcut_132: string;
         export { shortcut_132 as shortcut };
     }
-    export namespace track {
+    export namespace u {
         const deprecated_133: boolean;
         export { deprecated_133 as deprecated };
         const constructor_133: string;
@@ -1068,7 +1068,7 @@ declare namespace _default {
         const shortcut_133: string;
         export { shortcut_133 as shortcut };
     }
-    export namespace tt {
+    export namespace ul {
         const deprecated_134: boolean;
         export { deprecated_134 as deprecated };
         const constructor_134: string;
@@ -1076,7 +1076,7 @@ declare namespace _default {
         const shortcut_134: string;
         export { shortcut_134 as shortcut };
     }
-    export namespace u {
+    export namespace _var {
         const deprecated_135: boolean;
         export { deprecated_135 as deprecated };
         const constructor_135: string;
@@ -1084,7 +1084,8 @@ declare namespace _default {
         const shortcut_135: string;
         export { shortcut_135 as shortcut };
     }
-    export namespace ul {
+    export { _var as var };
+    export namespace video {
         const deprecated_136: boolean;
         export { deprecated_136 as deprecated };
         const constructor_136: string;
@@ -1092,7 +1093,7 @@ declare namespace _default {
         const shortcut_136: string;
         export { shortcut_136 as shortcut };
     }
-    export namespace _var {
+    export namespace wbr {
         const deprecated_137: boolean;
         export { deprecated_137 as deprecated };
         const constructor_137: string;
@@ -1100,30 +1101,13 @@ declare namespace _default {
         const shortcut_137: string;
         export { shortcut_137 as shortcut };
     }
-    export { _var as var };
-    export namespace video {
+    export namespace xmp {
         const deprecated_138: boolean;
         export { deprecated_138 as deprecated };
         const constructor_138: string;
         export { constructor_138 as constructor };
         const shortcut_138: string;
         export { shortcut_138 as shortcut };
-    }
-    export namespace wbr {
-        const deprecated_139: boolean;
-        export { deprecated_139 as deprecated };
-        const constructor_139: string;
-        export { constructor_139 as constructor };
-        const shortcut_139: string;
-        export { shortcut_139 as shortcut };
-    }
-    export namespace xmp {
-        const deprecated_140: boolean;
-        export { deprecated_140 as deprecated };
-        const constructor_140: string;
-        export { constructor_140 as constructor };
-        const shortcut_140: string;
-        export { shortcut_140 as shortcut };
     }
 }
 export default _default;

@@ -67,7 +67,6 @@
  * @property {new () => HTMLElement} Main
  * @property {new () => HTMLMapElement} Map
  * @property {new () => HTMLElement} Mark
- * @property {new () => HTMLUnknownElement} 
  * @property {new () => HTMLMenuElement} Menu
  * @property {new () => HTMLMetaElement} Meta
  * @property {new () => HTMLMeterElement} Meter
@@ -101,7 +100,6 @@
  * @property {new () => HTMLElement} Sub
  * @property {new () => HTMLElement} Summary
  * @property {new () => HTMLElement} Sup
- * @property {new () => HTMLUnknownElement} 
  * @property {new () => HTMLTableElement} Table
  * @property {new () => HTMLTableSectionElement} TBody
  * @property {new () => HTMLTableCellElement} TD
@@ -130,9 +128,9 @@ const Mod = "Mod";
 const DList = "DList";
 const Heading = "Heading";
 const Image = "Image";
-const Unknown = "Unknown";
 const OList = "OList";
 const Paragraph = "Paragraph";
+const Unknown = "Unknown";
 const TableSection = "TableSection";
 const TableCell = "TableCell";
 const TableRow = "TableRow";
@@ -182,7 +180,6 @@ module.exports = (self = globalThis) => new Proxy(
     ["kbd", Element],
     ["main", Element],
     ["mark", Element],
-    ["math", Unknown],
     ["nav", Element],
     ["noscript", Element],
     ["ol", OList],
@@ -200,7 +197,6 @@ module.exports = (self = globalThis) => new Proxy(
     ["sub", Element],
     ["summary", Element],
     ["sup", Element],
-    ["svg", Unknown],
     ["tbody", TableSection],
     ["td", TableCell],
     ["tfoot", TableSection],

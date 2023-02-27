@@ -49,7 +49,6 @@ const retype = require('./retype.js');
 
   const orderedData = {};
   for (const tag of [...Object.keys(data)].sort()) {
-    orderedData[tag] = data[tag];
     if (!data[tag].shortcut) {
       if (!retype[tag]) {
         switch (tag) {
@@ -61,6 +60,7 @@ const retype = require('./retype.js');
       }
       data[tag].shortcut = retype[tag];
     }
+    orderedData[tag] = data[tag];
   }
 
   writeFileSync(

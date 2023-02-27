@@ -82,7 +82,6 @@ import proxiedHTMLConstructors from './all.js';
  * @property {"HTMLMapElement"} Map
  * @property {"HTMLElement"} Mark
  * @property {"HTMLMarqueeElement"} Marquee
- * @property {new () => HTMLUnknownElement} 
  * @property {"HTMLMenuElement"} Menu
  * @property {"HTMLUnknownElement"} MenuItem
  * @property {"HTMLMetaElement"} Meta
@@ -127,7 +126,6 @@ import proxiedHTMLConstructors from './all.js';
  * @property {"HTMLElement"} Sub
  * @property {"HTMLElement"} Summary
  * @property {"HTMLElement"} Sup
- * @property {new () => HTMLUnknownElement} 
  * @property {"HTMLTableElement"} Table
  * @property {"HTMLTableSectionElement"} TBody
  * @property {"HTMLTableCellElement"} TD

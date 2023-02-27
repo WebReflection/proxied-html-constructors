@@ -81,7 +81,6 @@
  * @property {new () => HTMLMapElement} Map
  * @property {new () => HTMLElement} Mark
  * @property {new () => HTMLMarqueeElement} Marquee
- * @property {new () => HTMLUnknownElement} 
  * @property {new () => HTMLMenuElement} Menu
  * @property {new () => HTMLUnknownElement} MenuItem
  * @property {new () => HTMLMetaElement} Meta
@@ -126,7 +125,6 @@
  * @property {new () => HTMLElement} Sub
  * @property {new () => HTMLElement} Summary
  * @property {new () => HTMLElement} Sup
- * @property {new () => HTMLUnknownElement} 
  * @property {new () => HTMLTableElement} Table
  * @property {new () => HTMLTableSectionElement} TBody
  * @property {new () => HTMLTableCellElement} TD
@@ -221,7 +219,6 @@ module.exports = (self = globalThis) => new Proxy(
     ["keygen", Unknown],
     ["main", Element],
     ["mark", Element],
-    ["math", Unknown],
     ["menuitem", Unknown],
     ["nav", Element],
     ["nobr", Element],
@@ -249,7 +246,6 @@ module.exports = (self = globalThis) => new Proxy(
     ["sub", Element],
     ["summary", Element],
     ["sup", Element],
-    ["svg", Unknown],
     ["tbody", TableSection],
     ["td", TableCell],
     ["tfoot", TableSection],

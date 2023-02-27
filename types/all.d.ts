@@ -77,7 +77,6 @@ export type HTML = {
     Map: new () => HTMLMapElement;
     Mark: new () => HTMLElement;
     Marquee: new () => HTMLMarqueeElement;
-    "": new () => HTMLUnknownElement;
     Menu: new () => HTMLMenuElement;
     MenuItem: new () => HTMLUnknownElement;
     Meta: new () => HTMLMetaElement;

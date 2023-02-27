@@ -69,7 +69,6 @@ const proxiedHTMLConstructors = (m => /* c8 ignore start */ m.__esModule ? m.def
  * @property {"HTMLElement"} Main
  * @property {"HTMLMapElement"} Map
  * @property {"HTMLElement"} Mark
- * @property {new () => HTMLUnknownElement} 
  * @property {"HTMLMenuElement"} Menu
  * @property {"HTMLMetaElement"} Meta
  * @property {"HTMLMeterElement"} Meter
@@ -103,7 +102,6 @@ const proxiedHTMLConstructors = (m => /* c8 ignore start */ m.__esModule ? m.def
  * @property {"HTMLElement"} Sub
  * @property {"HTMLElement"} Summary
  * @property {"HTMLElement"} Sup
- * @property {new () => HTMLUnknownElement} 
  * @property {"HTMLTableElement"} Table
  * @property {"HTMLTableSectionElement"} TBody
  * @property {"HTMLTableCellElement"} TD

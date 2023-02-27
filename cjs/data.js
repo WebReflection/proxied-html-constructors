@@ -380,11 +380,6 @@ module.exports = ({
     "constructor": "HTMLMarqueeElement",
     "shortcut": "Marquee"
   },
-  "math": {
-    "deprecated": false,
-    "constructor": "HTMLUnknownElement",
-    "shortcut": ""
-  },
   "menu": {
     "deprecated": false,
     "constructor": "HTMLMenuElement",
@@ -604,11 +599,6 @@ module.exports = ({
     "deprecated": false,
     "constructor": "HTMLElement",
     "shortcut": "Sup"
-  },
-  "svg": {
-    "deprecated": false,
-    "constructor": "HTMLUnknownElement",
-    "shortcut": ""
   },
   "table": {
     "deprecated": false,

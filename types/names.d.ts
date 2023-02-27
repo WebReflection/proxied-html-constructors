@@ -63,7 +63,6 @@ export type HTML = {
     Main: "HTMLElement";
     Map: "HTMLMapElement";
     Mark: "HTMLElement";
-    "": new () => HTMLUnknownElement;
     Menu: "HTMLMenuElement";
     Meta: "HTMLMetaElement";
     Meter: "HTMLMeterElement";
