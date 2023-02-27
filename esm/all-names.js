@@ -45,6 +45,7 @@ import proxiedHTMLConstructors from './all.js';
  * @property {"HTMLDivElement"} Div
  * @property {"HTMLDListElement"} DL
  * @property {"HTMLElement"} DT
+ * @property {"HTMLElement"} Element
  * @property {"HTMLElement"} Em
  * @property {"HTMLEmbedElement"} Embed
  * @property {"HTMLFieldSetElement"} FieldSet
@@ -81,6 +82,7 @@ import proxiedHTMLConstructors from './all.js';
  * @property {"HTMLMapElement"} Map
  * @property {"HTMLElement"} Mark
  * @property {"HTMLMarqueeElement"} Marquee
+ * @property {"HTMLUnknownElement"} Math
  * @property {"HTMLMenuElement"} Menu
  * @property {"HTMLUnknownElement"} MenuItem
  * @property {"HTMLMetaElement"} Meta
@@ -125,6 +127,7 @@ import proxiedHTMLConstructors from './all.js';
  * @property {"HTMLElement"} Sub
  * @property {"HTMLElement"} Summary
  * @property {"HTMLElement"} Sup
+ * @property {"HTMLUnknownElement"} SVG
  * @property {"HTMLTableElement"} Table
  * @property {"HTMLTableSectionElement"} TBody
  * @property {"HTMLTableCellElement"} TD

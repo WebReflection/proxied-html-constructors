@@ -194,6 +194,11 @@ export default ({
     "constructor": "HTMLElement",
     "shortcut": "DT"
   },
+  "element": {
+    "deprecated": false,
+    "constructor": "HTMLElement",
+    "shortcut": "Element"
+  },
   "em": {
     "deprecated": false,
     "constructor": "HTMLElement",
@@ -373,6 +378,11 @@ export default ({
     "deprecated": true,
     "constructor": "HTMLMarqueeElement",
     "shortcut": "Marquee"
+  },
+  "math": {
+    "deprecated": false,
+    "constructor": "HTMLUnknownElement",
+    "shortcut": "Math"
   },
   "menu": {
     "deprecated": false,
@@ -593,6 +603,11 @@ export default ({
     "deprecated": false,
     "constructor": "HTMLElement",
     "shortcut": "Sup"
+  },
+  "svg": {
+    "deprecated": false,
+    "constructor": "HTMLUnknownElement",
+    "shortcut": "SVG"
   },
   "table": {
     "deprecated": false,

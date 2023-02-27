@@ -16,9 +16,13 @@ const retype = require('./retype.js');
   );
 
   const data = await page.evaluate(() => {
-    const data = {};
+    const data = {element: {
+      deprecated: false,
+      constructor: 'HTMLElement',
+      shortcut: 'Element'
+    }};
     const reHTML = /^HTML(.*?)Element$/;
-    const elements = document.querySelectorAll('.standard-table td:first-of-type code');
+    const elements = document.querySelectorAll('.table-container > table td:first-of-type code');
 
     for (const element of elements) {
       // grab clear tag name within angled brackets

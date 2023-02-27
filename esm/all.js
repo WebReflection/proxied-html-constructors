@@ -43,6 +43,7 @@
  * @property {new () => HTMLDivElement} Div
  * @property {new () => HTMLDListElement} DL
  * @property {new () => HTMLElement} DT
+ * @property {new () => HTMLElement} Element
  * @property {new () => HTMLElement} Em
  * @property {new () => HTMLEmbedElement} Embed
  * @property {new () => HTMLFieldSetElement} FieldSet
@@ -79,6 +80,7 @@
  * @property {new () => HTMLMapElement} Map
  * @property {new () => HTMLElement} Mark
  * @property {new () => HTMLMarqueeElement} Marquee
+ * @property {new () => HTMLUnknownElement} Math
  * @property {new () => HTMLMenuElement} Menu
  * @property {new () => HTMLUnknownElement} MenuItem
  * @property {new () => HTMLMetaElement} Meta
@@ -123,6 +125,7 @@
  * @property {new () => HTMLElement} Sub
  * @property {new () => HTMLElement} Summary
  * @property {new () => HTMLElement} Sup
+ * @property {new () => HTMLUnknownElement} SVG
  * @property {new () => HTMLTableElement} Table
  * @property {new () => HTMLTableSectionElement} TBody
  * @property {new () => HTMLTableCellElement} TD
@@ -217,6 +220,7 @@ export default (self = globalThis) => new Proxy(
     ["keygen", Unknown],
     ["main", Element],
     ["mark", Element],
+    ["math", Unknown],
     ["menuitem", Unknown],
     ["nav", Element],
     ["nobr", Element],
@@ -244,6 +248,7 @@ export default (self = globalThis) => new Proxy(
     ["sub", Element],
     ["summary", Element],
     ["sup", Element],
+    ["svg", Unknown],
     ["tbody", TableSection],
     ["td", TableCell],
     ["tfoot", TableSection],

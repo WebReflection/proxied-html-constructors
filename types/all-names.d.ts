@@ -40,6 +40,7 @@ export type HTML = {
     Div: "HTMLDivElement";
     DL: "HTMLDListElement";
     DT: "HTMLElement";
+    Element: "HTMLElement";
     Em: "HTMLElement";
     Embed: "HTMLEmbedElement";
     FieldSet: "HTMLFieldSetElement";
@@ -76,6 +77,7 @@ export type HTML = {
     Map: "HTMLMapElement";
     Mark: "HTMLElement";
     Marquee: "HTMLMarqueeElement";
+    Math: "HTMLUnknownElement";
     Menu: "HTMLMenuElement";
     MenuItem: "HTMLUnknownElement";
     Meta: "HTMLMetaElement";
@@ -120,6 +122,7 @@ export type HTML = {
     Sub: "HTMLElement";
     Summary: "HTMLElement";
     Sup: "HTMLElement";
+    SVG: "HTMLUnknownElement";
     Table: "HTMLTableElement";
     TBody: "HTMLTableSectionElement";
     TD: "HTMLTableCellElement";
